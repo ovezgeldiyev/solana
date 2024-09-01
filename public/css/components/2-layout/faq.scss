@@ -1,0 +1,92 @@
+.faq {
+  padding: 100px 0;
+  .auto__container {
+    max-width: 1180px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &Item {
+    width: 100%;
+    background: #141820;
+    border-radius: 15px;
+    @include transition;
+    margin-bottom: 20px;
+    &:last-child {
+      margin: 0;
+    }
+    &__head {
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s ease;
+      cursor: pointer;
+      &.active {
+        padding-bottom: 15px;
+        svg {
+          transform: rotate(0);
+        }
+      }
+      h5 {
+        display: inline-block;
+        background: linear-gradient(90deg, #f087ff 0%, #1fcff1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+        color: #9d9dae;
+        margin-left: 10px;
+        transform: rotate(-90deg);
+        transition: 0.3s ease;
+      }
+    }
+    &__body {
+      padding: 0 30px 0 30px;
+      overflow: hidden;
+      transition: 0.3s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      &.active {
+        padding: 0 30px 30px 30px;
+        max-height: 400px;
+        opacity: 1;
+      }
+      p {
+        color: #9d9dae;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+// 750px
+@mixin faq-sm-md {
+  .faq {
+    &Item {
+      &__head {
+        padding: 30px 20px;
+        h5 {
+          &.sm {
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+      &__body {
+        padding: 0 20px 0 20px;
+        &.active {
+          padding: 0 20px 20px 20px;
+        }
+      }
+    }
+  }
+}

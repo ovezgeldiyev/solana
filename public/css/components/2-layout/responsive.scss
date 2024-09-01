@@ -1,0 +1,127 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  @include hero-xxxlg-xxxxlg;
+  @include about-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 44px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  @include hero-xlg-xxlg;
+  @include about-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include footer-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  @include hero-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  @include hero-sm-md;
+  @include about-sm-md;
+  @include faq-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+  @include multi-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  .modal {
+    padding: 20px 10px;
+    &__inner {
+      padding: 30px 20px 20px;
+    }
+  }
+  .exampleTable {
+    margin-bottom: 15px;
+  }
+  .wallets {
+    &__row {
+      flex-direction: column;
+      margin: 0;
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 15px 0;
+    }
+    &__more {
+      margin-top: 5px;
+    }
+  }
+  .input {
+    padding: 10px;
+    input {
+      padding: 20px 130px 20px 15px;
+    }
+  }
+  p {
+    &.big {
+      font-size: 16px;
+    }
+  }
+  @include hero-xsm-sm;
+  @include multi-xsm-sm;
+  @include detail-xsm-sm;
+  @include congruts-xsm-sm;
+  @include footer-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  .auto__container {
+    padding: 0 10px;
+  }
+  @include hero-xxsm-xsm;
+}
+// 395px
+@include xxxsm-xxsm {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  @include multi-xxxsm-xxsm;
+  @include footer-xxxsm-xxsm;
+}

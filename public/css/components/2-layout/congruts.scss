@@ -1,0 +1,64 @@
+.congruts {
+  width: 100%;
+  max-width: 744px;
+  margin: 0 auto;
+  background: #0f1015;
+  border: 1px solid #394948;
+  border-radius: 20px;
+  padding: 50px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__icon {
+    width: 100px;
+    height: 100px;
+    background-color: #34bd8c;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 34px;
+      height: 34px;
+      color: $white;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    h5 {
+      margin-bottom: 15px;
+    }
+    p {
+      color: #9d9dae;
+      span {
+        color: #1fcff1;
+        font-weight: 500;
+      }
+    }
+  }
+  &__foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .button {
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+// 540px
+@mixin congruts-xsm-sm {
+  .congruts {
+    padding: 50px 20px 30px;
+  }
+}

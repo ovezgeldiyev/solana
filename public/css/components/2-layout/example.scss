@@ -1,0 +1,72 @@
+.example {
+  &Table {
+    position: relative;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+    margin-bottom: 18px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 100%;
+      content: "";
+      background: rgba(255, 255, 255, 0.07);
+    }
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 10px 15px 10px 0;
+      transition: 0.3s ease;
+      cursor: pointer;
+      &:first-child {
+        padding-top: 15px;
+      }
+      &:last-child {
+        padding-bottom: 15px;
+      }
+      &.active {
+        opacity: 1;
+        background: rgba(0, 255, 163, 0.1);
+      }
+      &:hover {
+        opacity: 1;
+        background: rgba(0, 255, 163, 0.1);
+      }
+      p {
+        width: 25px;
+        text-align: center;
+        color: #00ffa3;
+      }
+    }
+    &__address {
+      width: calc(100% - 40px);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $white;
+      word-wrap: break-word;
+    }
+  }
+  &Note {
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9d9dae;
+    background: rgba($color: $white, $alpha: 0.07);
+    svg {
+      width: 20px;
+      margin-right: 10px;
+      height: 20px;
+    }
+    p {
+      width: calc(100% - 30px);
+    }
+  }
+}

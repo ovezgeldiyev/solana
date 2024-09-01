@@ -1,0 +1,114 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: $black, $alpha: 0.55);
+  z-index: 100;
+  display: flex;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  &__inner {
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 540px;
+    background: #0f1015;
+    border: 1px solid #394948;
+    border-radius: 20px;
+  }
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    h5 {
+      color: $white;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #9d9dae;
+      max-width: 390px;
+    }
+  }
+  &__close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9d9dae;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      pointer-events: none;
+      height: 100%;
+    }
+  }
+}
+.wallets {
+  &__more {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: $white;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+    &.up {
+      svg {
+        transform: scaleY(-1);
+      }
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      transition: .3s ease;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -7px -10px;
+  }
+  &Item {
+    width: calc(50% - 20px);
+    margin: 7px 10px;
+    background: rgba($color: $white, $alpha: 0.07);
+    padding: 18px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      opacity: 0.8;
+    }
+    &__icon {
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    h6 {
+      width: calc(100% - 40px);
+      color: $white;
+    }
+  }
+}
